@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "1b9c333b-e28b-436d-8bf1-9bcf98345654",
-    "name": "New Collection",
+    "name": "RestAPI",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "56078115",
     "_collection_link": "https://go.postman.co/collection/56078115-1b9c333b-e28b-436d-8bf1-9bcf98345654?source=collection_link"
@@ -122,6 +122,74 @@
             "api",
             "students",
             "6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SECURITY_CREATE_ROLE",
+      "request": {
+        "method": "POST",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "SECURITY_CREATE_USER",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"heart\",\r\n    \"password\": \"fuentes\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/auth/register_authorized_user",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "auth",
+            "register_authorized_user"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "AUTH_LOGIN",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"heart\",\r\n    \"password\": \"fuentes\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/auth/auth_login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "auth",
+            "auth_login"
           ]
         }
       },
