@@ -58,6 +58,16 @@ async function createStudent(studentData) {
     }
 } 
 
+function resetForm()
+{
+    document.getElementById("studentId").value = "";
+    document.getElementById("studentForm").reset();
+
+    const submitButton = document.getElementById("submitBtn");
+    submitButton.textContext = "Add Student";
+    submitButton.style.backgroundColor = "#4CAF50"; // Reset to original color
+}
+
 async function loginUser(loginDto) {
     try {
         const response = await fetch(`${API_AUTH}/auth_login_session`, {
